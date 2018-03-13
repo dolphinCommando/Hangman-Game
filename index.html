@@ -3,24 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <title>Hangman</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         
     </head>
     <body>
-        <h1>Hangman Game Bigfoot Edition!</h1>
-        <img src="assets/images/bigfoot.jpg" alt="Real photo of Bigfoot" style="width: 400px">
-        <div id="start">Press any key to get started!</div>
-        <p>Wins:</p>
-        <div id="wins"></div>
-        <p>Current word:</p>
-        <div id="board"></div> 
-       
+        <header>
+            <img src="assets/images/usa-flag-flipped.jpg" alt="American flag" class="col-3">
+            <h1 class="col-6">Hangman</h1>
+            <img src="assets/images/usa-flag.jpg" alt="American flag" class="col-3">
+            <h2 class="offset-3 col-6">United Nations</h2>
+        </header>
 
-        <p>Number of guesses remaining:</p>
-        <div id="remaining"></div>
-        <p>Letters already guessed:</p>
-        <div id="guessed"></div>
+        <article>
+            <p class="class-md-8">You are an ambassador to the United Nations. Match the countries with the correct flags or risk an international crisis.</p>
+            <img src="assets/images/united-nations.png" alt="United Nations flag" class="col-md-4">
+        </article>
+
+        <section id="content">
+        
+            <div id="start">Press any key to get started!</div>            
+            <div id="flag"></div>
+            <div id="board"></div> 
+       
+            <p>Number of guesses remaining:</p>
+            <div id="remaining"></div>
+            <p>Letters already guessed:</p>
+            <div id="guessed"></div>
+            <p>Wins:</p>
+            <div id="wins"></div>
+
+        </section>
 
         <script src="assets/javascript/game.js" type="text/javascript"></script>
     </body>

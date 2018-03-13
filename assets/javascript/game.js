@@ -1,8 +1,7 @@
 
 var game = {
-    dictionary: ['aardvark', 'beluga', 'cassowary', 'dingo', 'elephant', 'frigatebird', 'gorilla'],
 
-    words: ['ug', 'aa', 'ah', 'ag', 'aw', 'ay', 'ad', 'ai', 'ax', 'ba', 'bk', 'da', 'do', 'eh', 'er', 'em', 'fa', 'fi', 'go', 'ha', 'he', 'hi', 'id','it', 'jo', 'ki', 'ka', 'la', 'lo', 'ma', 'mm', 'mo', 'na', 'no', 'of', 'oh', 'om', 'oo', 'ow', 'pi', 'pa', 'sh', 'si', 'te', 'ti', 'uh', 'um', 'up', 'we', 'wo', 'xi', 'xu', 'ya', 'ye', 'yo', 'za', 'zz', 'gu'],
+    words: ['afghanistan', 'brazil', 'cuba', 'denmark', 'ecuador', 'france', 'germany', 'haiti', 'india', 'japan', 'kenya', 'luxembourg', 'mexico', 'nigeria', 'oman', 'philippines', 'qatar', 'russia', 'sweden', 'turkey', 'ukraine', 'vietnam', 'yemen', 'zimbabwe'],
 
     word: '', 
     chosen: [],
@@ -12,7 +11,7 @@ var game = {
 
     userGuess: undefined,
 
-    remaining: 6,
+    remaining: 5,
 
     gamesWon: 0,
 
@@ -21,8 +20,9 @@ var game = {
 
     startGame: function() {
         console.log('Game has started');
-        game.setWord(game.dictionary);
+        game.setWord(game.words);
         console.log(game.word); 
+        game.setFlag(game.word);
         game.initBoard(game.word, 'board');  
         document.onkeyup = function(event) {
             console.log('Key pressed');
@@ -115,6 +115,13 @@ var game = {
         } else {
             game.word = wordset[random];
         }
+    },
+
+    setFlag: function(word) {
+        var link = 'assets/images/countries/' + word + '.jpg';
+        var img = '<img src="' + link + '" alt = "' + word + '" class=".flag">';
+        console.log(img);
+        document.getElementById('flag').innerHTML = img;
     },
 
     gameWon: function() {
