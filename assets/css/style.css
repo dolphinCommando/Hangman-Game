@@ -1,0 +1,37 @@
+
+body {
+    font-family: 'Merriweather', 'Georgia', serif;
+    margin: 15px;
+    background-image: url("../../assets/images/texture/white.png");
+}
+
+.usa {
+    width: 200px;
+    height: 175px;
+}
+
+.un {
+    height: 60%;
+}
+
+header h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+header, article, section {
+    margin-bottom: 50px;
+}
+
+section div {
+    padding: 10px;
+}
+
+#board {
+    text-align: center;
+    font-size: 3em;
+}
+
+footer {
+    text-align: center;
+}
